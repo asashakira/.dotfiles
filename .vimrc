@@ -1,0 +1,21 @@
+syntax on
+set noerrorbells
+set guicursor=
+set number
+set laststatus=2
+set helpheight=999
+set tabstop=2 softtabstop=2
+set shiftwidth=2
+set expandtab
+set autoindent
+set smartindent
+set nowrap
+set backspace=indent,eol,start
+set mouse=a
+set hidden
+set noswapfile
+set nobackup
+set nohlsearch
+set incsearch
+set scrolloff=8
+set sidescrolloff=16
