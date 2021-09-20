@@ -200,13 +200,9 @@ set $bg-color #2f343f
 # finds out, if available)
 bar {
   position top
-  status_command i3blocks -c ~/.config/i3/i3blocks.conf
+  status_command i3blocks -c ~/.config/i3blocks/config
 }
 
 bindsym $mod+shift+x exec i3lock --color "$bg-color"
 exec --no-startup-id fcitx -d
-exec_always feh --bg-fill ~/Pictures/bg3.jpg
 
-# screen saver off
-exec xset dpms 0 0 0
-exec xset s off
