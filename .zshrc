@@ -24,9 +24,8 @@ alias zshrc='v ~/.zshrc'
 alias szshrc='source ~/.zshrc'
 alias i3='v ~/.config/i3/config'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-#alias sus='sudo chmod 666 /sys/power/state && i3lock --color "#2f343f" && echo mem > /sys/power/state'
-alias sus='sudo i3lock --color "#2f343f" && echo mem > /sys/power/state'
-alias hib='sudo echo disk > /sys/power/state'
+alias sus='sudo chmod 666 /sys/power/state && i3lock --color "#2f343f" && echo mem > /sys/power/state'
+alias hib='sudo chmod 666 /sys/power/state && echo disk > /sys/power/state'
 
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000
@@ -50,5 +49,5 @@ eval "$(pyenv virtualenv-init -)"
 export PATH="$HOME/.nodenv/bin:$PATH"
 eval "$(nodenv init -)"
 
-# i3blocks
-export SCRIPT_DIR="$HOME/.config/i3blocks"
+# FZF
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'

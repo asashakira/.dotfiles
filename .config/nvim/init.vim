@@ -36,7 +36,7 @@ nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>u :UndotreeShow<CR>
 
 " Fuzzy Finder
-nnoremap <C-p> :GFiles<CR>
+nnoremap <C-p> :Files<CR>
 
 " NerdTree
 nnoremap <leader>n :NERDTreeToggle<CR>

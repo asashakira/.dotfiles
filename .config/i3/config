@@ -203,6 +203,4 @@ bar {
   status_command i3blocks -c ~/.config/i3blocks/config
 }
 
-bindsym $mod+shift+x exec i3lock --color "$bg-color"
 exec --no-startup-id fcitx -d
-
