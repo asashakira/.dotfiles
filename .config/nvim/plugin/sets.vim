@@ -9,6 +9,7 @@ set guicursor=
 
 "turn on numbering
 set number
+set relativenumber
 set laststatus=2
 set helpheight=999
 
