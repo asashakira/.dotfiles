@@ -204,3 +204,7 @@ bar {
 }
 
 exec --no-startup-id fcitx -d
+
+# screenshot
+bindsym Print       exec flameshot gui
+bindsym Shift+Print exec flameshot full

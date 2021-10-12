@@ -24,7 +24,7 @@ alias zshrc='v ~/.zshrc'
 alias szshrc='source ~/.zshrc'
 alias i3='v ~/.config/i3/config'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias sus='sudo chmod 666 /sys/power/state && i3lock --color "#2f343f" && echo mem > /sys/power/state'
+alias sus='sudo chmod 666 /sys/power/state && echo mem > /sys/power/state' #&& i3lock --color "#2f343f"'
 alias hib='sudo chmod 666 /sys/power/state && echo disk > /sys/power/state'
 
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
