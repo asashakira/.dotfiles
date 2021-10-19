@@ -41,8 +41,13 @@ nnoremap <C-p> :Files<CR>
 " NerdTree
 nnoremap <leader>n :NERDTreeToggle<CR>
 
-" D but copy
+" D but Y
 nnoremap Y y$
 
 " auto close { on enter
 imap {<CR> {<CR>}<C-c>O
+imap (<CR> (<CR>)<C-c>O
+imap [<CR> [<CR>]<C-c>O
+
+" no auto indent
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
