@@ -4,6 +4,9 @@ set noerrorbells
 "local vimrc
 set exrc
 
+" auto reload
+set autoread
+
 "diable cursor styling
 set guicursor=
 
