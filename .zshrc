@@ -2,7 +2,7 @@
 
 autoload -U compinit && compinit -u
 autoload -U colors && colors
-PS1="%B%{$fg[red]%}%n%{$fg[blue]%}%~ %{$reset_color%}$%b "
+PS1="%B%F{red}%n%F{blue}%~ %F{reset_color}%b$ "
 #PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 
 alias v='nvim'
@@ -19,7 +19,7 @@ elif [ "$OSTYPE" = "darwin" ]; then
 fi
 
 alias la='ls -A'
-alias vimrc='v ~/.config/nvim/init.vim'
+alias vimrc='v ~/.config/nvim/'
 alias zshrc='v ~/.zshrc'
 alias szshrc='source ~/.zshrc'
 alias i3='v ~/.config/i3/config'
