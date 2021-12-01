@@ -23,6 +23,7 @@ alias vimrc='v ~/.config/nvim/'
 alias zshrc='v ~/.zshrc'
 alias szshrc='source ~/.zshrc'
 alias i3='v ~/.config/i3/config'
+alias i3s='v ~/.config/i3status/config'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias sus='sudo chmod 666 /sys/power/state && echo mem > /sys/power/state' #&& i3lock --color "#2f343f"'
 alias hib='sudo chmod 666 /sys/power/state && echo disk > /sys/power/state'
@@ -40,14 +41,22 @@ setopt nolistbeep
 setopt auto_pushd
 
 # pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
+export PYENV_ROOT=$HOME/.pyenv
+export PATH=$PYENV_ROOT/bin:$PATH
 eval "$(pyenv init --path)"
 eval "$(pyenv virtualenv-init -)"
 
 # nodenv
-export PATH="$HOME/.nodenv/bin:$PATH"
+export PATH=$HOME/.nodenv/bin:$PATH
 eval "$(nodenv init -)"
 
 # FZF
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+
+# Android Studio
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export JAVA_HOME=/usr/lib/jvm/default
