@@ -78,6 +78,10 @@ bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
+# move focused workspace between monitors
+bindsym $mod+Ctrl+greater move workspace to output right
+bindsym $mod+Ctrl+less move workspace to output left
+
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
@@ -149,6 +153,7 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 
 assign [class="discord"] $ws5
 assign [class="Slack"] $ws5
+assign [class="zoom"] $ws6
 
 # reload the configuration file
 bindsym $mod+Shift+c reload

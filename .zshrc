@@ -12,11 +12,14 @@ alias a='./a'
 alias p='python'
 alias ps='python sol.py'
 
-if [ "$OSTYPE" = "linux-gnu" ]; then
-  alias ls='ls --color=auto'
-elif [ "$OSTYPE" = "darwin" ]; then
-  alias ls='ls -G'
-fi
+case ${OSTYPE} in 
+  darwin*)
+    alias ls='ls -G'
+    ;;
+  linux*)
+    alias ls='ls --color=auto'
+    ;;
+esac
 
 alias la='ls -A'
 alias vimrc='v ~/.config/nvim/'
