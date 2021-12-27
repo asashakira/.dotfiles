@@ -50,9 +50,11 @@ let NERDTreeShowHidden=1
 nnoremap Y y$
 
 " auto close { on enter
-imap {<CR> {<CR>}<C-c>O
-imap (<CR> (<CR>)<C-c>O
-imap [<CR> [<CR>]<C-c>O
+if !exists('g:vscode')
+  imap {<CR> {<CR>}<C-c>O
+  imap (<CR> (<CR>)<C-c>O
+  imap [<CR> [<CR>]<C-c>O
+endif
 
 " no auto indent
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
