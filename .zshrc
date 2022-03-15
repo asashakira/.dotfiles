@@ -25,6 +25,8 @@ alias la='ls -A'
 alias vimrc='v ~/.config/nvim/'
 alias zshrc='v ~/.zshrc'
 alias szshrc='source ~/.zshrc'
+alias yabairc='v ~/.config/yabai/yabairc'
+alias skhdrc='v ~/.config/skhd/skhdrc'
 alias i3='v ~/.config/i3/config'
 alias i3s='v ~/.config/i3status/config'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
@@ -46,7 +48,9 @@ setopt auto_pushd
 # pyenv
 export PYENV_ROOT=$HOME/.pyenv
 export PATH=$PYENV_ROOT/bin:$PATH
-eval "$(pyenv init --path)"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init --path)"
+fi
 eval "$(pyenv virtualenv-init -)"
 
 # nodenv
