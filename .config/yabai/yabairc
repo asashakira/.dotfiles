@@ -14,16 +14,16 @@ yabai -m rule --add app="^Line$" sticky=on layer=above manage=off
 
 ## Some random global settings
 yabai -m config focus_follows_mouse autofocus
-yabai -m config mouse_follows_focus off
+yabai -m config mouse_follows_focus on
 # New window spawns to the right if vertical split, or bottom if horizontal split
 yabai -m config window_placement second_child
 yabai -m config window_topmost on
 yabai -m config window_shadow float
 yabai -m config window_opacity off
-yabai -m config window_opacity_duration 0.00
+# yabai -m config window_opacity_duration 0.00
 yabai -m config active_window_opacity 1.0
-#yabai -m config normal_window_opacity        0.97
-#yabai -m config window_border                on | off
+# yabai -m config normal_window_opacity        0.97
+# yabai -m config window_border                on | off
 
 # border
 yabai -m config window_border on

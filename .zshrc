@@ -1,13 +1,14 @@
 #!/bin/sh
 
 autoload -U compinit && compinit -u
+zstyle ':completion:*' menu select
 autoload -U colors && colors
 PS1="%B%F{red}%n%F{blue}%~ %F{reset_color}%b$ "
 #PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 
 alias v='nvim'
 alias g='g++ -std=gnu++17 -Wall -o a'
-alias gs='g sol.cpp'
+alias gs='g sol.cc'
 alias a='./a'
 alias p='python'
 alias ps='python sol.py'

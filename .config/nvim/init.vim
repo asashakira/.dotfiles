@@ -19,8 +19,6 @@ Plug 'leafgarland/typescript-vim'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'jparise/vim-graphql'
-" Plug 'fremff/vim-css-syntax'
-" Plug 'tpope/vim-commentary'
 
 Plug 'gruvbox-community/gruvbox'
 
