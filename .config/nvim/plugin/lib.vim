@@ -1,6 +1,6 @@
 
 "skeletons
-nnoremap <leader>cpp :-1read $HOME/.vim/templates/atcoder.cpp<CR>3}ddgg
+nnoremap <leader>cc :-1read $HOME/.vim/templates/atcoder.cc<CR>
 
 "libaries
 nnoremap <leader>uf :-1read $HOME/.vim/templates/lib/UnionFind.py<CR>
