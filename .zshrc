@@ -1,6 +1,9 @@
 #!/bin/sh
 
-autoload -U compinit && compinit -u
+autoload -Uz compinit
+compinit
+zstyle ':completion:*' menu select
+
 autoload -U colors && colors
 PS1="%B%F{red}%n%F{blue}%~ %F{reset_color}%b$ "
 #PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
@@ -30,8 +33,6 @@ alias skhdrc='v ~/.config/skhd/skhdrc'
 alias i3='v ~/.config/i3/config'
 alias i3s='v ~/.config/i3status/config'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias sus='sudo chmod 666 /sys/power/state && echo mem > /sys/power/state' #&& i3lock --color "#2f343f"'
-alias hib='sudo chmod 666 /sys/power/state && echo disk > /sys/power/state'
 
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000

@@ -14,17 +14,25 @@ Plug 'preservim/nerdtree'
 Plug 'mbbill/undotree'
 Plug 'mattn/emmet-vim'
 Plug 'Vimjas/vim-python-pep8-indent'
-Plug 'pangloss/vim-javascript'
-Plug 'leafgarland/typescript-vim'
-Plug 'MaxMEllon/vim-jsx-pretty'
-Plug 'peitalin/vim-jsx-typescript'
-Plug 'jparise/vim-graphql'
-" Plug 'fremff/vim-css-syntax'
-" Plug 'tpope/vim-commentary'
 
+" coc for vscode like experience
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" tree shitter
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+" beautiful colorscheme
 Plug 'gruvbox-community/gruvbox'
 
 call plug#end()
+
+" tree shitter
+lua require('config')
+
+" coc
+let g:coc_global_extensions = [
+  \ 'coc-tsserver'
+  \ ]
 
 " leader key
 let mapleader = " "
@@ -58,3 +66,4 @@ endif
 
 " no auto indent
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+

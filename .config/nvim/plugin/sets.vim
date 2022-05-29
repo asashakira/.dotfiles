@@ -1,22 +1,22 @@
-"turn off annoying bells
+" turn off annoying bells
 set noerrorbells
 
-"local vimrc
+" local vimrc
 set exrc
 
 " auto reload
 set autoread
 
-"diable cursor styling
+" diable cursor styling
 set guicursor=
 
-"turn on numbering
+" turn on numbering
 set number
 set relativenumber
 set laststatus=2
 set helpheight=999
 
-"tab indents wraps
+" tab, indents, wraps
 set tabstop=2 softtabstop=2
 set shiftwidth=2
 set expandtab
@@ -25,21 +25,27 @@ set smartindent
 set nowrap
 set backspace=indent,eol,start
 
-"turn mouse on
+" turn mouse on
 set mouse=a
 
-"no swapfiles or backups, only undofiles
+" columns
+set colorcolumn=80
+set signcolumn=yes
+
+" keep files running in the background
 set hidden
+
+" keeping history
 set noswapfile
 set nobackup
 set undodir=~/.vim/undodir
 set undofile
 
-"search
+" search
 set nohlsearch
 set incsearch
 
-"scroll option
+" scroll option
 set scrolloff=8
 set sidescrolloff=16
 
