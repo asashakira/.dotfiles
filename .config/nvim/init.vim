@@ -29,11 +29,6 @@ call plug#end()
 " tree shitter
 lua require('config')
 
-" coc
-let g:coc_global_extensions = [
-  \ 'coc-tsserver'
-  \ ]
-
 " leader key
 let mapleader = " "
 

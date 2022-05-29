@@ -13,7 +13,8 @@ set guicursor=
 " turn on numbering
 set number
 set relativenumber
-set laststatus=2
+
+" full screen help window
 set helpheight=999
 
 " tab, indents, wraps
