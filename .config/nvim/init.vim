@@ -21,6 +21,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " tree shitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
+" harpoooooooooooooooon
+Plug 'nvim-lua/plenary.nvim'
+Plug 'ThePrimeagen/harpoon'
+
 " beautiful colorscheme
 Plug 'gruvbox-community/gruvbox'
 
