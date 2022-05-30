@@ -12,8 +12,9 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdtree'
 Plug 'mbbill/undotree'
-Plug 'mattn/emmet-vim'
 Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'mattn/emmet-vim'
+Plug 'alvan/vim-closetag'
 
 " coc for vscode like experience
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
