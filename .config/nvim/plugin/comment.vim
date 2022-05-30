@@ -4,6 +4,7 @@ let s:comment_map = {
     \   "go": '\/\/',
     \   "java": '\/\/',
     \   "javascript": '\/\/',
+    \   "typescript": '\/\/',
     \   "lua": '--',
     \   "scala": '\/\/',
     \   "php": '\/\/',
@@ -46,5 +47,5 @@ function! ToggleComment()
     end
 endfunction
 
-nnoremap <leader>/ :call ToggleComment()<cr>
-vnoremap <leader>/ :call ToggleComment()<cr>
+nnoremap <leader>/ <plug>NERDCommenterToggle
+vnoremap <leader>/ <plug>NERDCommenterToggle

@@ -21,6 +21,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " tree shitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
+" comment
+Plug 'preservim/nerdcommenter'
+
 " harpoooooooooooooooon
 Plug 'nvim-lua/plenary.nvim'
 Plug 'ThePrimeagen/harpoon'
