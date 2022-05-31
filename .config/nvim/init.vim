@@ -16,6 +16,9 @@ Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'mattn/emmet-vim'
 Plug 'alvan/vim-closetag'
 
+" git
+Plug 'tpope/vim-fugitive'
+
 " coc for vscode like experience
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
