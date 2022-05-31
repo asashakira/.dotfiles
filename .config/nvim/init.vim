@@ -49,6 +49,9 @@ nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
+" C-^ not working on mac...
+nnoremap <leader>b <C-^>
+
 " undotree
 nnoremap <leader>u :UndotreeShow<CR>
 
