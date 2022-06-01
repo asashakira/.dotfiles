@@ -63,8 +63,10 @@ nnoremap <leader>n :NERDTreeToggle<CR>
 let g:NERDTreeIgnore = ['^node_modules$']
 let NERDTreeShowHidden=1
 
-" D but Y
+" the y
 nnoremap Y y$
+nnoremap <leader>y "+y
+vnoremap <leader>y "+y
 
 " auto close { on enter
 if !exists('g:vscode')
