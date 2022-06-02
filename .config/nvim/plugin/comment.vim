@@ -47,5 +47,12 @@ function! ToggleComment()
     end
 endfunction
 
-nnoremap <leader>/ <plug>CommentaryLine
-vnoremap <leader>/ <plug>CommentaryLine
+
+" Create default mappings
+let g:NERDCreateDefaultMappings = 1
+
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+nnoremap <leader>/ <plug>NERDCommenterToggle
+vnoremap <leader>/ <plug>NERDCommenterToggle

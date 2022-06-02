@@ -26,7 +26,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " comment
-Plug 'tpope/vim-commentary'
+Plug 'preservim/nerdcommenter'
 
 " harpoooooooooooooooon
 Plug 'nvim-lua/plenary.nvim'
