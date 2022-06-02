@@ -47,5 +47,5 @@ function! ToggleComment()
     end
 endfunction
 
-nnoremap <leader>/ <plug>NERDCommenterToggle
-vnoremap <leader>/ <plug>NERDCommenterToggle
+nnoremap <leader>/ <plug>CommentaryLine
+vnoremap <leader>/ <plug>CommentaryLine
