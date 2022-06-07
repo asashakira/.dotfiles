@@ -18,6 +18,7 @@ Plug 'alvan/vim-closetag'
 
 " git
 Plug 'tpope/vim-fugitive'
+Plug 'junegunn/gv.vim'
 
 " coc for vscode like experience
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
