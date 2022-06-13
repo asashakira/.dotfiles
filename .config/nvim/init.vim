@@ -54,13 +54,13 @@ nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>b <C-^>
 
 " undotree
-nnoremap <leader>u :UndotreeShow<CR>
+nnoremap <silent><leader>u :UndotreeShow<CR>
 
 " Fuzzy Finder
-nnoremap <C-p> :Files<CR>
+nnoremap <silent><C-p> :Files<CR>
 
 " NerdTree
-nnoremap <leader>n :NERDTreeToggle<CR>
+nnoremap <silent><leader>n :NERDTreeToggle<CR>
 let g:NERDTreeIgnore = ['^node_modules$']
 let NERDTreeShowHidden=1
 
