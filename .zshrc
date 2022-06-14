@@ -51,3 +51,5 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 eval "$(nodenv init -)"
 
+export TERM=alacritty
+
