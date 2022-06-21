@@ -10,7 +10,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'preservim/nerdtree'
 Plug 'mbbill/undotree'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'mattn/emmet-vim'
@@ -26,7 +25,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " tree shitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
-" comment
+" nerds
+Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
 
 " harpoooooooooooooooon
@@ -78,4 +78,7 @@ endif
 
 " no auto indent
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" langu
+lang en_US.UTF-8
 
