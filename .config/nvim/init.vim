@@ -13,7 +13,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'mbbill/undotree'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'mattn/emmet-vim'
-Plug 'alvan/vim-closetag'
 
 " git
 Plug 'tpope/vim-fugitive'
@@ -24,9 +23,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " tree shitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'windwp/nvim-ts-autotag'
+Plug 'windwp/nvim-autopairs'
 
 " nerds
-Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
 
 " harpoooooooooooooooon
@@ -59,22 +59,14 @@ nnoremap <silent><leader>u :UndotreeShow<CR>
 " Fuzzy Finder
 nnoremap <silent><C-p> :Files<CR>
 
-" NerdTree
-nnoremap <silent><leader>n :NERDTreeToggle<CR>
-let g:NERDTreeIgnore = ['^node_modules$']
-let NERDTreeShowHidden=1
+" netrw
+filetype plugin on
+nnoremap <leader>pv :Ex<CR>
 
 " the y
 nnoremap Y y$
 nnoremap <leader>y "+y
 vnoremap <leader>y "+y
-
-" auto close { on enter
-if !exists('g:vscode')
-  imap {<CR> {<CR>}<C-c>O
-  imap (<CR> (<CR>)<C-c>O
-  imap [<CR> [<CR>]<C-c>O
-endif
 
 " no auto indent
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
