@@ -59,6 +59,9 @@ nnoremap <silent><leader>u :UndotreeShow<CR>
 " Fuzzy Finder
 nnoremap <silent><C-p> :Files<CR>
 
+" prettier
+command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
+
 " netrw
 filetype plugin on
 nnoremap <leader>pv :Ex<CR>
