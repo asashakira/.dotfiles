@@ -7,6 +7,7 @@ fi
 
 # nodenv
 export PATH=$HOME/.nodenv/bin:$PATH
+eval "$(nodenv init -)"
 
 # FZF
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'

@@ -104,3 +104,5 @@ alias zshrc="nvim ~/.zshrc"
 alias vimrc="nvim ~/.config/nvim"
 alias vim="nvim"
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias g="g++ -std=gnu++17 -Wall -o a"
+alias a="./a"
