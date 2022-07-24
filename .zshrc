@@ -106,3 +106,14 @@ alias vim="nvim"
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias g="g++ -std=gnu++17 -Wall -o a"
 alias a="./a"
+
+# bun completions
+[ -s "/home/akira/.bun/_bun" ] && source "/home/akira/.bun/_bun"
+
+# bun
+export BUN_INSTALL="/home/akira/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# bun
+export BUN_INSTALL="/home/akira/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
