@@ -33,6 +33,7 @@ Plug 'ThePrimeagen/harpoon'
 
 " telescope
 Plug 'nvim-lua/popup.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 
 " beautiful colorscheme
