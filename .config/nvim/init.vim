@@ -8,8 +8,6 @@ set wildignore+=**/.git/*
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
 Plug 'mbbill/undotree'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'mattn/emmet-vim'
@@ -32,6 +30,10 @@ Plug 'preservim/nerdcommenter'
 " harpoooooooooooooooon
 Plug 'nvim-lua/plenary.nvim'
 Plug 'ThePrimeagen/harpoon'
+
+" telescope
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 
 " beautiful colorscheme
 Plug 'gruvbox-community/gruvbox'
@@ -56,8 +58,11 @@ nnoremap <leader>b <C-^>
 " undotree
 nnoremap <silent><leader>u :UndotreeShow<CR>
 
-" Fuzzy Finder
-nnoremap <silent><C-p> :Files<CR>
+" Telescope
+nnoremap <silent><C-p> <cmd>Telescope find_files<CR>
+nnoremap <silent><leader>fg <cmd>Telescope live_grep<CR>
+nnoremap <silent><leader>fb <cmd>Telescope buffers<cr>
+nnoremap <silent><leader>fh <cmd>Telescope help_tags<cr>
 
 " prettier
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
