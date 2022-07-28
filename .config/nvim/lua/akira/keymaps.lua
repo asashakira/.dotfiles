@@ -14,7 +14,7 @@ keymap("n", "<C-j>", ":wincmd j<cr>", opts)
 keymap("n", "<C-k>", ":wincmd k<cr>", opts)
 keymap("n", "<C-l>", ":wincmd l<cr>", opts)
 
-keymap("n", "<leader>e", ":Lex 30<cr>", opts)
+keymap("n", "<leader>e", ":Ex<cr>", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize +2<cr>", opts)
