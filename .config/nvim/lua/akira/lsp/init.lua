@@ -3,5 +3,6 @@ if not status_ok then
   return
 end
 
-require"akira.lsp.lsp-installer"
---require"akira.lsp.handlers".setup()
+require "akira.lsp.lsp-installer"
+require "akira.lsp.handlers".setup()
+require "akira.lsp.null-ls"
