@@ -100,6 +100,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# for tmux
+export TERM="alacritty"
+
 alias zshrc="nvim ~/.zshrc"
 alias vimrc="nvim ~/.config/nvim"
 alias vim="nvim"
@@ -109,10 +112,6 @@ alias a="./a"
 
 # bun completions
 [ -s "/home/akira/.bun/_bun" ] && source "/home/akira/.bun/_bun"
-
-# bun
-export BUN_INSTALL="/home/akira/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
 
 # bun
 export BUN_INSTALL="/home/akira/.bun"
