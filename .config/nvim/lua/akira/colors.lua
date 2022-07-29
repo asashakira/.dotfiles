@@ -10,8 +10,6 @@ try
     endif
     let g:gruvbox_invert_selection='0'
 
-    set background=dark
-
     highlight Normal     guibg=NONE
     highlight LineNr     guibg=NONE guifg=#5eacd3
     highlight SignColumn guibg=NONE
@@ -19,21 +17,6 @@ try
     highlight CursorLineNR guibg=None
   endfun
   call ColorMyPencils()
-
-  let g:fzf_colors =
-  \ { 'fg':      ['fg', 'Normal'],                                                           
-    \ 'bg':      ['bg', 'Normal'],                                                           
-    \ 'hl':      ['fg', 'Comment'],                                                          
-    \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],                             
-    \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],                                       
-    \ 'hl+':     ['fg', 'Statement'],                                                        
-    \ 'info':    ['fg', 'PreProc'],                                                          
-    \ 'border':  ['fg', 'Ignore'],                                                           
-    \ 'prompt':  ['fg', 'Conditional'],                                                      
-    \ 'pointer': ['fg', 'Exception'],                                                        
-    \ 'marker':  ['fg', 'Keyword'],                                                          
-    \ 'spinner': ['fg', 'Label'],                                                            
-    \ 'header':  ['fg', 'Comment'] } 
 
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme default

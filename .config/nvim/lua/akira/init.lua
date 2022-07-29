@@ -1,11 +1,15 @@
-require "akira.autocommands"
-require "akira.autopairs"
-require "akira.sets"
-require "akira.keymaps"
-require "akira.plugins"
-require "akira.colors"
-require "akira.cmp"
-require "akira.lsp"
-require "akira.telescope"
-require "akira.treesitter"
-require "akira.comment"
+require("akira.autocommands")
+require("akira.autopairs")
+require("akira.bufferline")
+require("akira.colors")
+require("akira.comment")
+require("akira.cmp")
+require("akira.icons")
+require("akira.keymaps")
+require("akira.lsp")
+require("akira.nvim-tree")
+require("akira.plugins")
+require("akira.sets")
+require("akira.telescope")
+require("akira.toggleterm")
+require("akira.treesitter")

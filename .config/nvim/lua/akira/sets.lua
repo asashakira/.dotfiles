@@ -12,7 +12,6 @@ local sets = {
   expandtab = true,
   smartindent = true,
   wrap = false,
-  showtabline = 1,
 
   -- column
   number = true,
@@ -27,10 +26,6 @@ local sets = {
   ignorecase = true,
   smartcase = true,
 
-  -- splits (I don't think I need this..)
-  splitbelow = true,
-  splitright = true,
-
   -- mouse and cursor
   mouse = "a",
   guicursor = "",
@@ -41,13 +36,16 @@ local sets = {
   completeopt = { "menuone", "noselect" },
   pumheight = 10,
 
-  -- files
+  -- buffers files windows splits
+  showtabline = 2,
   swapfile = false,
   backup = false,
   writebackup = false,
   undofile = true,
   hidden = true,
   fileencoding = "utf-8",
+  splitbelow = true,
+  splitright = true,
 
   -- so we can actually see
   scrolloff = 8,
