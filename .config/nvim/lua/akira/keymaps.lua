@@ -40,9 +40,7 @@ keymap("x", "K", ":move '<-2<cr>gv-gv", opts)
 keymap("v", "p", '"_dP', opts)
 
 -- Telescope
--- keymap("n", "<C-p>", "<cmd>Telescope find_files<cr>", opts)
--- TODO use find_file if it's not a git repo
-keymap("n", "<C-p>", "<cmd>Telescope git_files<cr>", opts)
+keymap("n", "<C-p>", "<cmd>lua require'akira.telescope'.project_files()<cr>", opts)
 keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>fb", "<cmd>Telescope buffers<cr>", opts)
 keymap("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", opts)

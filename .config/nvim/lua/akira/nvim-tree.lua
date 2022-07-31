@@ -22,7 +22,7 @@ nvim_tree.setup({
 		"alpha",
 	},
 	filters = {
-		custom = { ".git" },
+		-- custom = { ".git" },
 		exclude = { ".gitignore" },
 	},
 	open_on_tab = false,
