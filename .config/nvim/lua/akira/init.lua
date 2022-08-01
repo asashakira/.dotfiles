@@ -1,5 +1,6 @@
 require("akira.autocommands")
 require("akira.autopairs")
+require("akira.autotag")
 require("akira.bufferline")
 require("akira.colors")
 require("akira.comment")
