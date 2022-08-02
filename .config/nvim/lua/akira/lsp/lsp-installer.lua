@@ -10,6 +10,7 @@ local servers = {
   "sumneko_lua",
   "tsserver",
   "pyright",
+  "graphql",
 }
 
 lsp_installer.setup({

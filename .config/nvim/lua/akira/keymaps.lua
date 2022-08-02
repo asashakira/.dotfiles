@@ -21,8 +21,11 @@ keymap("n", "<C-Left>", ":vertical resize -2<cr>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<cr>", opts)
 
 -- Navigate buffers
-keymap("n", "<C-l>", ":bnext<cr>", opts)
-keymap("n", "<C-h>", ":bprevious<cr>", opts)
+keymap("n", "<C-h>", ":BufferLineCyclePrev<cr>", opts)
+keymap("n", "<C-l>", ":BufferLineCycleNext<cr>", opts)
+
+keymap("n", "<leader>bh", "<cmd>BufferLineMovePrev<cr>", opts)
+keymap("n", "<leader>bl", "<cmd>BufferLineMoveNext<cr>", opts)
 
 -- Nvimtree
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
