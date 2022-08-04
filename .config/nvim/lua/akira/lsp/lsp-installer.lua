@@ -11,6 +11,7 @@ local servers = {
   "tsserver",
   "pyright",
   "graphql",
+  "gopls",
 }
 
 lsp_installer.setup({
