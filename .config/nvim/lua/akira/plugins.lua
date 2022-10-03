@@ -44,6 +44,7 @@ return packer.startup(function(use)
 
 	-- colorschemes
 	use("gruvbox-community/gruvbox")
+	use("folke/tokyonight.nvim")
 
 	-- cmp plugins
 	use("hrsh7th/nvim-cmp") -- The completion plugin
