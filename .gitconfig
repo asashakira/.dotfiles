@@ -1,0 +1,13 @@
+[user]
+  email = asa.shakira340@gmail.com
+  name = akira
+[init]
+  defaultBranch = mucho
+[push]
+  autoSetupRemote = true
+[pager]
+  branch = false
+  grep = false
+[core]
+  pager = less -F -X
+  editor = nvim
