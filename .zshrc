@@ -101,7 +101,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # for tmux
-export TERM="alacritty"
+# export TERM="alacritty"
 
 alias zshrc="nvim ~/.zshrc"
 alias vimrc="nvim ~/.config/nvim"
