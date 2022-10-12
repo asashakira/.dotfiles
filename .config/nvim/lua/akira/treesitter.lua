@@ -16,6 +16,10 @@ configs.setup {
     enable = true,
     disable = { "yaml" }
   },
+  autotag = {
+    enable = true,
+    disable = { "xml", "markdown" },
+  },
   context_commentstring = {
     enable = true,
     enable_autocmd = false,
