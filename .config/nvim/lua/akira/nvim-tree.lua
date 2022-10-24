@@ -18,9 +18,9 @@ nvim_tree.setup {
   disable_netrw = true, -- default = false
   hijack_cursor = false,
   hijack_netrw = true,
-  hijack_unnamed_buffer_when_opening = false,
+  hijack_unnamed_buffer_when_opening = true, -- false
   ignore_buffer_on_setup = false,
-  open_on_setup = false,
+  open_on_setup = true, -- false
   open_on_setup_file = false,
   open_on_tab = false,
   focus_empty_on_setup = false,
