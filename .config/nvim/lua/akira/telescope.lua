@@ -7,6 +7,8 @@ local actions = require("telescope.actions")
 
 telescope.setup({
 	defaults = {
+    layout_strategy = "vertical",
+
 		vimgrep_arguments = {
 			"rg",
 			"--color=never",
