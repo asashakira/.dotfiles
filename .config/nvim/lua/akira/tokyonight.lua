@@ -1,9 +1,9 @@
-local status_ok, configs = pcall(require, "tokyonight")
+local status_ok, tokyonight = pcall(require, "tokyonight")
 if not status_ok then
   return
 end
 
-configs.setup {
+tokyonight.setup {
   -- your configuration comes here
   -- or leave it empty to use the default settings
   style = "night", -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
