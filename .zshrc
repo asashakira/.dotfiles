@@ -107,7 +107,7 @@ alias zshrc="nvim ~/.zshrc"
 alias vimrc="nvim ~/.config/nvim"
 alias vim="nvim"
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias g="g++ -std=gnu++17 -Wall -o a"
+alias c="clang++ -std=c++17 -stdlib=libc++ -Wall -O2 -DNDEBUG -DONLINE_JUDGE -o a"
 alias a="./a"
 
 # bun completions
