@@ -199,3 +199,9 @@ exec --no-startup-id fcitx5 -d
 # screenshot
 bindsym Print       exec flameshot gui
 bindsym Shift+Print exec flameshot full
+
+# picom
+exec --no-startup-id picom -b --config ~/.config/picom/picom.conf
+
+# set background
+exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/towasama.jpg
