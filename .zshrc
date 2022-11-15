@@ -117,3 +117,5 @@ alias a="./a"
 export BUN_INSTALL="/home/akira/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+# poetry
+export PATH="/Users/akira/.local/bin:$PATH
