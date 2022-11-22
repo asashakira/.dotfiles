@@ -204,4 +204,4 @@ bindsym Shift+Print exec flameshot full
 exec --no-startup-id picom -b --config ~/.config/picom/picom.conf
 
 # set background
-exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/towasama.jpg
+exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/trippy.jpg

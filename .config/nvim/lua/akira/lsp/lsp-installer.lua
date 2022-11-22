@@ -12,6 +12,7 @@ local servers = {
   "pyright",
   "graphql",
   "gopls",
+  "rust_analyzer",
 }
 
 lsp_installer.setup({
