@@ -65,7 +65,7 @@ local function lsp_keymaps(bufnr)
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "K", "<cmd>lua vim.lsp.buf.hover()<cr>", opts)
 	-- vim.api.nvim_buf_set_keymap(bufnr, "n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<cr>", opts)
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
-	vim.cmd([[ command! Format execute 'lua vim.lsp.buf.format()' ]])
+	vim.cmd([[ command! Format execute 'lua vim.lsp.buf.format({timeout_ms = 10000})' ]])
 end
 
 M.on_attach = function(client, bufnr)

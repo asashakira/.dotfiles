@@ -7,7 +7,6 @@ local lspconfig = require "lspconfig"
 
 local servers = {
   "jsonls",
-  "lua_ls",
   "tsserver",
   "pyright",
   "graphql",
