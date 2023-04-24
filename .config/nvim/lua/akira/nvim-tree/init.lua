@@ -9,6 +9,7 @@ if not config_status_ok then
 end
 
 local icons = require("akira.icons")
+local on_attach = require("akira.nvim-tree.on-attach").on_attach
 
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
@@ -27,7 +28,7 @@ nvim_tree.setup {
   sync_root_with_cwd = false,
   reload_on_bufenter = false,
   respect_buf_cwd = false,
-  on_attach = "disable",
+  on_attach = on_attach,
   remove_keymaps = false,
   select_prompts = false,
   view = {
@@ -42,12 +43,6 @@ nvim_tree.setup {
     signcolumn = "yes",
     mappings = {
       custom_only = false,
-      list = {
-        -- user mappings go here
-        { key = { "l", "<CR>", "o" }, cb = tree_cb("edit") },
-        { key = "h", cb = tree_cb("close_node") },
-        { key = "v", cb = tree_cb("vsplit") },
-      },
     },
     float = {
       enable = false,
