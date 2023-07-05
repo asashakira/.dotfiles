@@ -1,22 +1,43 @@
-#!/bin/bash -e
+#!/usr/bin/env bash
 
-# ./aws-temp-token.sh token-code
-TOKEN_CODE=$1
+set -eu
 
-MFA_DEVICE_ARN=arn:aws:iam::157507247180:mfa/akira.itai
+ENV="prod" # <-- SET HERE
+MFA_DEVICE_ARN=arn:aws:iam::157507247180:mfa/akira.itai # <-- SET HERE
 AWS_PROFILE=mfa
-AWS_REGION=ap-northeast-1
 DURATION=129600
 
-# credentials
-CREDENTIALS=$(aws sts get-session-token --serial-number ${MFA_DEVICE_ARN} --duration-seconds ${DURATION} --token-code ${TOKEN_CODE} | jq -r '.Credentials')
+if ! command -v aws &>/dev/null; then
+  echo "REQUIRE: aws" >&2
+  exit 1
+fi
 
-# Display Expiration
-echo "Expiration: "$(echo $CREDENTIALS | jq -r '.Expiration')
+if [[ $# != 1 ]]; then
+  echo "USAGE: $0 <token-code>" >&2
+  exit 1
+fi
 
-# set to mfa profile
-aws configure set aws_access_key_id $(echo $CREDENTIALS | jq -r '.AccessKeyId') --profile $AWS_PROFILE
-aws configure set aws_secret_access_key $(echo $CREDENTIALS | jq -r '.SecretAccessKey') --profile $AWS_PROFILE
-aws configure set aws_session_token $(echo $CREDENTIALS | jq -r '.SessionToken') --profile $AWS_PROFILE
+TOKEN_CODE=$1
 
-exit 0
+if [[ "$TOKEN_CODE" == "" ]]; then
+  echo "Error: token-code is empty." >&2
+  exit 1
+fi
+
+CREDENTIALS=$(
+  aws sts get-session-token \
+    --serial-number "$MFA_DEVICE_ARN" \
+    --duration-seconds $DURATION \
+    --token-code "$TOKEN_CODE" \
+)
+
+if [[ "$CREDENTIALS" == "" ]]; then
+  echo "Error: fetched credencial is empty." >&2
+  exit 1
+fi
+
+echo "SUCCESS!"
+echo "$CREDENTIALS" | awk -F ': ' '/Expiration/{print "Expires at: "$2}'
+aws configure set aws_access_key_id $(echo "$CREDENTIALS" | awk -F '[:"]' '/AccessKeyId/{print $(NF-1)}') --profile $AWS_PROFILE
+aws configure set aws_secret_access_key $(echo "$CREDENTIALS" | awk -F '[:"]' '/SecretAccessKey/{print $(NF-1)}') --profile $AWS_PROFILE
+aws configure set aws_session_token $(echo "$CREDENTIALS" | awk -F '[:"]' '/SessionToken/{print $(NF-1)}') --profile $AWS_PROFILE
