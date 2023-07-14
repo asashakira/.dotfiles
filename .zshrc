@@ -119,3 +119,6 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # poetry
 export PATH="/Users/akira/.local/bin:$PATH"
+
+# don't share history between terminals!!!
+unsetopt share_history
