@@ -4,7 +4,27 @@ if not status_ok then
 end
 
 configs.setup {
-  ensure_installed = "all",
+  ensure_installed = {
+    "c",
+    "cpp",
+    "css",
+    "dockerfile",
+    "git_rebase",
+    "go",
+    "graphql",
+    "html",
+    "javascript",
+    "json",
+    "lua",
+    "php",
+    "python",
+    "rust",
+    "toml",
+    "tsx",
+    "typescript",
+    -- "yaml",
+    "vim",
+  },
   sync_install = true,
   ignore_install = { "" },
   highlight = {
