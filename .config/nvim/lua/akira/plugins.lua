@@ -40,7 +40,6 @@ return packer.startup(function(use)
 	use("wbthomason/packer.nvim")
 	use("nvim-lua/popup.nvim")
 	use("nvim-lua/plenary.nvim") -- need this for literaly everything
-	use("kyazdani42/nvim-web-devicons") -- need this for nvim tree and bufferline
 
 	-- colorschemes
 	use("gruvbox-community/gruvbox")
@@ -83,7 +82,10 @@ return packer.startup(function(use)
 	use("moll/vim-bbye")
 
 	-- treeeeeeeeeee
-	use("kyazdani42/nvim-tree.lua")
+	use("nvim-tree/nvim-tree.lua")
+
+  -- file icons
+	use("nvim-tree/nvim-web-devicons")
 
 	-- toggle term
 	use("akinsho/toggleterm.nvim")
