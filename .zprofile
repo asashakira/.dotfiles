@@ -6,7 +6,8 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 # nodenv
-export PATH=$HOME/.nodenv/bin:$PATH
+export NODENV_ROOT=$HOME/.packages/nodenv
+export PATH=$NODENV_ROOT/bin:$PATH
 eval "$(nodenv init -)"
 
 # FZF
