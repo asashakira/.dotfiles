@@ -96,6 +96,12 @@ return packer.startup(function(use)
   -- git
   use("lewis6991/gitsigns.nvim")
 
+  -- status
+  use({
+    'j-hui/fidget.nvim',
+    tag = 'legacy'
+  })
+
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end
