@@ -9,13 +9,12 @@ local formatting = null_ls.builtins.formatting
 local diagnostics = null_ls.builtins.diagnostics
 
 null_ls.setup({
-  debug = false,
   sources = {
     formatting.prettier,
-    formatting.eslint,
+    formatting.eslint_d,
     formatting.black.with({ extra_args = { "--fast" } }),
     formatting.stylua,
     diagnostics.pylint,
-    diagnostics.eslint,
+    diagnostics.eslint_d,
   },
 })
