@@ -12,12 +12,13 @@ if ! command -v aws &>/dev/null; then
   exit 1
 fi
 
-if [[ $# != 1 ]]; then
-  echo "USAGE: $0 <token-code>" >&2
-  exit 1
-fi
+# if [[ $# != 1 ]]; then
+#   echo "USAGE: $0 <token-code>" >&2
+#   exit 1
+# fi
 
-TOKEN_CODE=$1
+# TOKEN_CODE=$1
+TOKEN_CODE=$(op item get pufpqpytell22eo7sex2dbim7a --otp)
 
 if [[ "$TOKEN_CODE" == "" ]]; then
   echo "Error: token-code is empty." >&2
