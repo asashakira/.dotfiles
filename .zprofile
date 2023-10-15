@@ -1,5 +1,5 @@
 # pyenv
-export PYENV_ROOT=$HOME/.pyenv
+export PYENV_ROOT=$HOME/.packages/pyenv
 export PATH=$PYENV_ROOT/bin:$PATH
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init --path)"
@@ -8,7 +8,9 @@ fi
 # nodenv
 export NODENV_ROOT=$HOME/.packages/nodenv
 export PATH=$NODENV_ROOT/bin:$PATH
-eval "$(nodenv init -)"
+if command -v nodenv 1>/dev/null 2>&1; then
+  eval "$(nodenv init -)"
+fi
 
 # FZF
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
