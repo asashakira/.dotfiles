@@ -1,0 +1,3 @@
+[submodule "/home/akira/.config/nvim"]
+	path = /home/akira/.config/nvim
+	url = https://github.com/asashakira/neovimrc.git
