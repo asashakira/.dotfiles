@@ -13,12 +13,14 @@ if command -v nodenv 1>/dev/null 2>&1; then
 fi
 
 # FZF
-export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+export FZF_DEFAULT_COMMAND="fd --type f --hidden --follow --exclude .git"
 
-# Android Studio
-#export ANDROID_HOME=$HOME/Android/Sdk
-#export PATH=$PATH:$ANDROID_HOME/emulator
-#export PATH=$PATH:$ANDROID_HOME/tools
-#export PATH=$PATH:$ANDROID_HOME/tools/bin
-#export PATH=$PATH:$ANDROID_HOME/platform-tools
-#export JAVA_HOME=/usr/lib/jvm/default
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+# bun completions
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+
+
+# poetry
+export PATH="$HOME/.local/bin:$PATH"

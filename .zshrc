@@ -103,21 +103,9 @@ source $ZSH/oh-my-zsh.sh
 # for tmux
 # export TERM="alacritty"
 
-alias zshrc="nvim ~/.zshrc"
-alias vimrc="nvim ~/.config/nvim"
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias c="clang++ -std=c++17 -stdlib=libc++ -Wall -O2 -DNDEBUG -DONLINE_JUDGE -o a"
 alias a="./a"
-
-# bun completions
-[ -s "/home/akira/.bun/_bun" ] && source "/home/akira/.bun/_bun"
-
-# bun
-export BUN_INSTALL="/home/akira/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
-# poetry
-export PATH="/Users/akira/.local/bin:$PATH"
 
 # don't share history between terminals!!!
 unsetopt share_history
