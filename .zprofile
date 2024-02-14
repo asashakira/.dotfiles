@@ -5,6 +5,9 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init --path)"
 fi
 
+# pyenv-virtualenv
+eval "$(pyenv virtualenv-init -)"
+
 # nodenv
 export NODENV_ROOT=$HOME/.packages/nodenv
 export PATH=$NODENV_ROOT/bin:$PATH
