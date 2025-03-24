@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git golang)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -102,16 +102,12 @@ source $ZSH/oh-my-zsh.sh
 
 # for tmux
 # export TERM="alacritty"
+# if [ -n $TERM ]; then
+#     ~/.local/bin/tmux-init
+# fi
 
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
-alias gpp="g++-12 -std=gnu++20 -O2 -DONLINE_JUDGE -DATCODER \
--Wall -Wextra \
--mtune=native -march=native \
--fconstexpr-depth=2147483647 -fconstexpr-loop-limit=2147483647 -fconstexpr-ops-limit=2147483647 \
--I/opt/ac-library -I/opt/boost/gcc/include -L/opt/boost/gcc/lib \
--o a \
--lgmpxx -lgmp \
--I/usr/include/eigen3"
+alias gpp="g++ -std=gnu++20 -O2 -Wall -Wextra -o a"
 alias a="./a"
 
 # don't share history between terminals!!!
