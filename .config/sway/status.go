@@ -61,7 +61,7 @@ func wifi() string {
 	}
 	wifi := strings.TrimSpace(string(out))
 
-	cmdstr = fmt.Sprintf("nmcli d w | grep %v | awk '{print $8}'", wifi)
+	cmdstr = fmt.Sprintf("nmcli d w | grep -E \"(^|\\s)%v($|\\s)\" | awk '{print $8}'", wifi)
 	cmd = exec.Command("sh", "-c", cmdstr)
 	out, _ = cmd.Output()
 	signal := strings.TrimSpace(string(out))
