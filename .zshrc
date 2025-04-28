@@ -110,5 +110,6 @@ alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias gpp="g++ -std=gnu++20 -O2 -Wall -Wextra -o a"
 alias a="./a"
 
-# don't share history between terminals!!!
+# opts
 unsetopt share_history
+unsetopt AUTO_CD
