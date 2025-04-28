@@ -22,10 +22,8 @@ set $menu fuzzel
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output * bg ~/wallpapers/kindred1.jpg fill
-# output eDP-1 pos 380 0 scale 1.25
-output eDP-1 pos 380 0
-# output eDP-1 pos 0 1080
-# output DP-3 pos 0 0
+output eDP-1 pos 0 0
+output DP-1 res 1920x1080 pos 0 -1080
 # output DP-3 transform 90
 output DP-3 pos 1920 0
 
@@ -186,6 +184,11 @@ input type:keyboard {
 
     # Move focus to the parent container
     bindsym $mod+a focus parent
+
+    # Make notification floating
+    for_window [app_id="firefox" title="^$"] \
+    floating enable, \
+    move position 0 0
 #
 # Scratchpad:
 #
@@ -235,8 +238,9 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
     # Special key to take a screenshot with grim
-    bindsym Print exec slurp | grim -g - - | wl-copy
-    # bindsym Print exec grim -o DP-1
+    # bindsym Print exec slurp | grim -g - - | wl-copy
+    # bindsym Print exec grim -o DP-1 | wl-copy
+    bindsym Print exec /usr/share/sway-contrib/grimshot save window | wl-copy
 
 #
 # Status Bar:
