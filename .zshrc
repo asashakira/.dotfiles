@@ -106,7 +106,7 @@ source $ZSH/oh-my-zsh.sh
 #     ~/.local/bin/tmux-init
 # fi
 
-alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias dots="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias gpp="g++ -std=gnu++20 -O2 -Wall -Wextra -o a"
 alias a="./a"
 
