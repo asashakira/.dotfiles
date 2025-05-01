@@ -15,7 +15,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 ### Install nerd fonts
 #### Mac
-psst: You need brew  
 
 all nerd fonts
 ```
@@ -29,10 +28,10 @@ https://github.com/asashakira/neovimrc
 
 ## Install
 
+I really should make an install script
 ```
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-echo ".dotfiles" >> .gitignore
+alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 git clone --bare https://github.com/asashakira/.dotfiles.git $HOME/.dotfiles
-dotfiles checkout
-dotfiles config --local status.showUntrackedFiles no
+dots checkout
+dots config --local status.showUntrackedFiles no
 ```
