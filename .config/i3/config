@@ -10,6 +10,13 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
+# Home row direction keys, like vim
+set $left h
+set $down j
+set $up k
+set $right l
+# Your preferred terminal emulator
+set $term alacritty
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -39,10 +46,7 @@ bindsym XF86MonBrightnessDown exec brightnessctl s 20%- # decrease screen bright
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
-
-# start chrome
-bindsym $mod+g exec google-chrome-stable
+bindsym $mod+Return exec $term
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -94,7 +98,7 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
+# bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
@@ -203,7 +207,7 @@ bindsym Print       exec flameshot gui
 bindsym Shift+Print exec flameshot full
 
 # picom
-exec --no-startup-id picom -b --config ~/.config/picom/picom.conf
+exec_always --no-startup-id picom -b --config ~/.config/picom/picom.conf
 
 # set background
-exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/trippy.jpg
+exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/kindred1.jpg

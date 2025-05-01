@@ -21,7 +21,7 @@ set $menu fuzzel
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/wallpapers/kindred1.jpg fill
+output * bg ~/Pictures/wallpapers/kindred1.jpg fill
 output eDP-1 pos 0 0
 output DP-1 res 1920x1080 pos 0 -1080
 # output DP-3 transform 90
@@ -101,7 +101,8 @@ input type:keyboard {
     bindsym $mod+Shift+r reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+    bindsym $mod+Shift+m exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+
 #
 # Moving around:
 #
@@ -126,6 +127,7 @@ input type:keyboard {
     bindsym $mod+Shift+Down move down
     bindsym $mod+Shift+Up move up
     bindsym $mod+Shift+Right move right
+
 #
 # Workspaces:
 #
@@ -179,16 +181,12 @@ input type:keyboard {
     # Toggle the current focus between tiling and floating mode
     bindsym $mod+Shift+space floating toggle
 
-    # Swap focus between the tiling area and the floating area
-    bindsym $mod+space focus mode_toggle
+    # # Swap focus between the tiling area and the floating area
+    # bindsym $mod+space focus mode_toggle
+    #
+    # # Move focus to the parent container
+    # bindsym $mod+a focus parent
 
-    # Move focus to the parent container
-    bindsym $mod+a focus parent
-
-    # Make notification floating
-    for_window [app_id="firefox" title="^$"] \
-    floating enable, \
-    move position 0 0
 #
 # Scratchpad:
 #
@@ -225,6 +223,7 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
+
 #
 # Utilities:
 #
@@ -249,9 +248,8 @@ bindsym $mod+r mode "resize"
 bar {
     position top
 
-    status_command while ~/.config/sway/status; do sleep 1; done
-    # status_command i3status
-    # swaybar_command waybar
+    # status_command while ~/.config/sway/status; do sleep 1; done
+    swaybar_command waybar
 
     pango_markup enabled
 
@@ -262,6 +260,7 @@ bar {
     }
 }
 
-include /etc/sway/config.d/*
+exec fcitx5 -d --replace
 
-exec_always fcitx5 -d --replace
+hide_edge_borders --i3 smart
+workspace_layout tabbed
