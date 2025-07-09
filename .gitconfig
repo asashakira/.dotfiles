@@ -3,7 +3,7 @@
 [credential "https://gist.github.com"]
 	helper = !/usr/bin/gh auth git-credential
 [user]
-  email = asa.shakira340@gmail.com
+  email = 26534710+asashakira@users.noreply.github.com.
   name = akira
 [init]
   defaultBranch = master
