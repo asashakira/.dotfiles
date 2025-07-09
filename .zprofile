@@ -6,7 +6,7 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 # pyenv-virtualenv
-eval "$(pyenv virtualenv-init -)"
+# eval "$(pyenv virtualenv-init -)"
 
 # FZF
 export FZF_DEFAULT_COMMAND="fd --type f --hidden --follow --exclude .git"
