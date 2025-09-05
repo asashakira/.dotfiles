@@ -1,0 +1,12 @@
+#!/bin/bash
+
+repo=$(fd -u -t d --regex '(^|/)\.git$' -x dirname {} | fzf)
+name=$(basename "$repo")
+
+if wezterm cli list | awk 'NR>1 {print $4}' | grep -qx "$name"; then
+  echo "workspace '$name' exists"
+else
+  wezterm cli spawn --new-window --workspace "$name" --cwd "$repo" > /dev/null
+  echo "workspace '$name' has been created"
+fi
+
