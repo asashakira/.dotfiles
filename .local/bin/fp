@@ -3,6 +3,11 @@
 repo=$(fd -u -t d --regex '(^|/)\.git$' -x dirname {} | fzf)
 name=$(basename "$repo")
 
+if [[ -z "$name" ]] then
+  echo "no repository selected"
+  exit 1
+fi
+
 if wezterm cli list | awk 'NR>1 {print $4}' | grep -qx "$name"; then
   echo "workspace '$name' exists"
 else

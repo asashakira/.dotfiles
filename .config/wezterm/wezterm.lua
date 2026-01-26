@@ -1,19 +1,19 @@
 local wezterm = require("wezterm")
 
 local mux = wezterm.mux
-
--- full screen on enter
 wezterm.on("gui-startup", function(cmd)
 	local _, _, window = mux.spawn_window(cmd or {})
 	window:gui_window():maximize()
 end)
 
+local config = wezterm.config_builder()
+
+local act = wezterm.action
+
 wezterm.on("update-right-status", function(window, pane)
 	window:set_right_status(window:active_workspace())
 end)
 
-local config = wezterm.config_builder()
-local act = wezterm.action
 config.keys = {
 	-- direction
 	{
@@ -73,11 +73,9 @@ config.keys = {
 	},
 }
 
-if wezterm.target_os == "windows" then
-  config.default_domain = "WSL:Ubuntu-24.04"
-end
-
 config.color_scheme = "Tokyo Night (Gogh)"
+config.default_domain = "WSL:Ubuntu-24.04"
+-- config.enable_tab_bar = false
 config.font = wezterm.font("Hack Nerd Font Mono")
 config.font_size = 10
 config.window_decorations = "INTEGRATED_BUTTONS"
