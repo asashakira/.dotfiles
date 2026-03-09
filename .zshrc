@@ -100,16 +100,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# for tmux
-# export TERM="alacritty"
-# if [ -n $TERM ]; then
-#     ~/.local/bin/tmux-init
-# fi
-
-alias dots="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
-alias gpp="g++ -std=gnu++20 -O2 -Wall -Wextra -o a"
-alias a="./a"
-
-# opts
-unsetopt share_history
-unsetopt AUTO_CD
+# Path to your modular configs
+ZSH_CONFIGS=$HOME/.zsh
+# Loop through and source every .zsh file in that folder
+if [ -d "$ZSH_CONFIGS" ]; then
+  for config_file in "$ZSH_CONFIGS"/*.zsh; do
+    source "$config_file"
+  done
+fi
