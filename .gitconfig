@@ -1,12 +1,8 @@
-[credential "https://github.com"]
-	helper = !/usr/bin/gh auth git-credential
-[credential "https://gist.github.com"]
-	helper = !/usr/bin/gh auth git-credential
 [user]
-  email = 26534710+asashakira@users.noreply.github.com.
+  email = 26534710+asashakira@users.noreply.github.com
   name = akira
 [init]
-  defaultBranch = master
+  defaultBranch = main
 [push]
   autoSetupRemote = true
 [pager]
