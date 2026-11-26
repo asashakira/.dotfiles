@@ -76,8 +76,12 @@ config.keys = {
 config.color_scheme = "Tokyo Night (Gogh)"
 config.default_domain = "WSL:Ubuntu-24.04"
 -- config.enable_tab_bar = false
-config.font = wezterm.font("Hack Nerd Font Mono")
+config.font = wezterm.font_with_fallback({
+	{ family = "Hack Nerd Font Mono" },
+	{ family = "Source Han Code JP" },
+})
 config.font_size = 10
 config.window_decorations = "INTEGRATED_BUTTONS"
 
 return config
+
