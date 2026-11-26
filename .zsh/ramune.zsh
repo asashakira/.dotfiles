@@ -38,3 +38,35 @@ open-github () {
     echo "Opening $REPO_NAME..."
     wslview "$REMOTE_URL"
 }
+
+
+awsp() {
+  local profile
+  profile=$(
+    grep -E '^\[profile ' ~/.aws/config |
+      sed -E 's/^\[profile (.+)\]$/\1/' |
+      fzf --prompt='AWS profile › ' --height=40% --reverse \
+  ) || return
+
+  export AWS_PROFILE="$profile"
+  echo "AWS_PROFILE=$profile"
+
+  if ! aws sts get-caller-identity --no-cli-pager >/dev/null 2>&1; then
+    echo "Session expired or missing — running sso login..."
+    aws sso login --profile "$profile" || return
+  fi
+
+  aws sts get-caller-identity --no-cli-pager
+}
+
+show_virtual_env() {
+  if [ -n "$VIRTUAL_ENV" ]; then
+    # Extracts 'py313' from the path or uses VIRTUAL_ENV_PROMPT if set
+    echo "${VIRTUAL_ENV_PROMPT:-$(basename "$VIRTUAL_ENV")} "
+  fi
+}
+# Update your PS1 to include the function output
+# This prepends the env name to your existing prompt
+export PS1="\$(show_virtual_env)$PS1"
+
+export AWS_PAGER=""
